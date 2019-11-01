@@ -1,3 +1,4 @@
+import java.util.*;
 //Grace Shang
 // 10 October 2018
 // Period 4
@@ -12,13 +13,13 @@ public class ArrayLab3 {
 		int[] removeArr = remove(a2, removeIdx);
 		int sumOfEvens = sumEven(appendArr);
 		rotateRight(a1);
-	
+	}	
 		
 	public static int[] sum(int[] arr1, int[] arr2) {
 //		new array which each element is the sum of the corresponding elements of the two arrays?
 		int[] combinedArr = new int [arr1.length];
 		for(int i = 0; i < arr1.length; i++) {
-			combinedArr[i] = arr1[i] + arr2[2];
+			combinedArr[i] = arr1[i] + arr2[i];
 		}
 		return combinedArr;
 	}
@@ -39,9 +40,20 @@ public class ArrayLab3 {
 //		returns an array of integers consisting of all of the elements of arr except for the element at index idx 
 //		(thus, the returned array has a length of arr.length – 1)	
 		int[] secondArr = new int[arr.length -1];
-		for(int i = 0; i < secondArr.length; i++)
-			
+		for(int i = idx; i < secondArr.length; i++) {
+		secondArr[i] = arr[i];	
 		}
 		
+	}
+	
+	public static int sumEven(int[] arr) {
+		int sum = 0;
+//		returns an integer containing the sum of the elements at the even indices of arr.
+//		(That means elements at indices 0,2,4,6,8.)
+		for(int i = 0; i<arr.length; i++) {
+			if(i%2 == 0) {
+				sum += arr[i];
+			}
+		}return sum;
 	}
 }
