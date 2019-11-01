@@ -67,7 +67,7 @@ public class ArrayLab3 {
 
 	public static void rotateRight(int[] arr) {
 //		moves each element of arr one index to the right (element 0 goes to element 1, element 1 goes to element 2 etc)
-		int last = arr[arr.length + 1];
+		int last = arr[arr.length - 1];
 		for(int i = arr.length - 1; i > 0; i--) {
 			arr[i] = arr[i-1];
 		}
