@@ -4,7 +4,7 @@
 //Using the methods created in access calculate
 public class DoMath {
 	public static void main(String[]args) {
-		System.out.println(Calculate.gcf(28,32));
+		System.out.println(Calculate.isDivisibleBy(5,0));
 	}
 }
 

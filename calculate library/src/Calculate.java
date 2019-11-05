@@ -48,25 +48,25 @@ public class Calculate {
 	}
 		
 //discriminant - provides coefficients of a quadratic equation in standard form.
-	public static double discriminant(double a, double b, double c) {
+	public static double discriminant(double num1, double num2, double num3) {
 		double answer = 0.0;
-		answer = ((b*b)-4*a*c)/(2*a);
+		answer = ((num2*num2-4*num1*num3)/(2*num1));
 		return answer;	
 	}
 //toImproperFrac - converts a mixed number to an improper fraction.
-	public static String toImproperFrac(int a, int b, int c) {
+	public static String toImproperFrac(int whole, int num, int denom) {
 		int numerator = 0;
 		int denominator = 0;
-		numerator = (a*c)+b;
-		denominator = c;
+		numerator = (whole*denom)+num;
+		denominator = denom;
 		return numerator + "/" + denominator;
 	}
 	
 //toMixedNum (a is the numerator, and b is the denominator) - converts from improper fraction to mixed number.
-	public static String toMixedNum(int a, int b) {
-		int wholeNumber = a/b;
-		a = a%b;
-		return wholeNumber + "_" + a + "/" + b; 
+	public static String toMixedNum(int numerator, int denominator) {
+		int wholeNumber = numerator/denominator;
+		numerator = numerator%denominator;
+		return wholeNumber + "_" + numerator + "/" + denominator; 
 	}
 	
 //foil - converts binomial multiplication form into quadratic equation form. 
@@ -76,9 +76,9 @@ public class Calculate {
 	
 //PART TWO	
 //isDivisbleBy - determines if an integer is divisible by another.
-	public static boolean isDivisibleBy(int a, int b) {
-		if(b==0) throw new IllegalArgumentException("no answer");
-		if(a%b == 0) {
+	public static boolean isDivisibleBy(int dividend, int divider) {
+		if(divider==0) throw new IllegalArgumentException("no answer");
+		if(dividend%divider == 0) {
 			return true;
 		}else {
 			return false;
@@ -86,46 +86,46 @@ public class Calculate {
 	}
 	
 //absValue - returns the absolute value of a number. 
-	public static double absValue(double a) {
-		if(a<=0) {
-			return (a*-1);
+	public static double absValue(double num) {
+		if(num<=0) {
+			return (num*-1);
 		}else{
-			return a;
+			return num;
 		}
 	}
 	
 //max - returns larger of two values. accepts two doubles and returns one double.
-	public static double max(double a, double b) {
-		if(a>b) {
-			return a;
+	public static double max(double num1, double num2) {
+		if(num1>num2) {
+			return num1;
 		}else {
-			return b;
+			return num2;
 		}
 	}		
 //max3 - returns the larger of three variables - accepts three doubles and returns one double.
-	public static double max(double a, double b, double c) {
-		if(a>b && a>c) {
-			return a;
-		}else if(b>a && b>c) {
-			return b;
+	public static double max(double num1, double num2, double num3) {
+		if(num1>num2 && num1>num3) {
+			return num1;
+		}else if(num2>num2 && num2>num3) {
+			return num2;
 		}else{
-			return c;
+			return num3;
 		}
 		}
 
 //min - returns minimum of two integers. Accepts two integers and returns an int.
-	public static int min(int a, int b) {
-		if(a<b) {
-			return a;
+	public static int min(int num1, int num2) {
+		if(num1<num2) {
+			return num1;
 		}else
-			return b;
+			return num2;
 		}
-
-	public static double min(double a, double b) {
-		if(a<b) {
-			return a;
+//min method, accepts two doubles
+	public static double min(double num1, double num2) {
+		if(num1<num2) {
+			return num1;
 		}else
-			return b;
+			return num2;
 		}
 	
 //round2 - rounds a double to two decimal places. Returns a double.
@@ -169,11 +169,11 @@ public class Calculate {
 		return true;
 	}
 //gcf - finds greatest common factor between two intervals. Accepts two integers and returns one integer.
-	public static int gcf(int a, int b) {
-		if(a==0 || b==0) throw new IllegalArgumentException("a==0 && b==0");
+	public static int gcf(int num1, int num2) {
+		if(num1==0 || num2==0) throw new IllegalArgumentException("a==0 && b==0");
 		int gcf = 1;
-		for(int i=1; i<=max(a,b); i++) {
-			if(isDivisibleBy(a,i) && isDivisibleBy(b,i)) {
+		for(int i=1; i<=max(num1,num2); i++) {
+			if(isDivisibleBy(num1,i) && isDivisibleBy(num2,i)) {
 				gcf = i;
 			}
 		}
