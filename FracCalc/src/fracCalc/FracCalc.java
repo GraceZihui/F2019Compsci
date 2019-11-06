@@ -3,15 +3,15 @@ import java.util.*;
 public class FracCalc {
 
     public static void main(String[] args) {
-    	System.out.println(produceAnswer("5_3/4 + 6_5/8"));
+//    	System.out.println(produceAnswer("5_3/4 + 6_5/8"));
         // TODO: Read the input from the user and call produceAnswer with an equation
-//    	Scanner scan = new Scanner(System.in);
-//    	String userInput = scan.next();
-//    		do {
-//        	System.out.println("please enter equation:");
-//        	userInput = scan.next();
-//    		System.out.println("answer: " + produceAnswer(userInput));
-//    		} while(!(userInput.equals("quit")));
+    	Scanner scan = new Scanner(System.in);
+    	String userInput = scan.next();
+    		do {
+        	System.out.println("please enter equation:");
+        	userInput = scan.next();
+    		System.out.println("answer: " + produceAnswer(userInput));
+    		} while(!(userInput.equals("quit")));
 
 }
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
