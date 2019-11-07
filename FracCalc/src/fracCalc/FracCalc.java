@@ -24,31 +24,41 @@ public class FracCalc {
     public static String produceAnswer(String input) { 
         // TODO: Implement this function to produce the solution to the input
     	String[] part1 = input.split(" "); //[1_1/2 + 6_1/4] --> [1_1/2, +, 6_1/4]
-    	int wholeNum;
-    	int numer;
-    	int denom;
-    	if(part1[2].contains("/")) {
-    		if(part1[2].contains("_")) {
-    		wholeNum = Integer.parseInt(part1[2].substring(0, part1[2].indexOf("_"))); 
-    	    numer = Integer.parseInt(part1[2].substring(part1[2].indexOf("_")+1, part1[2].indexOf("/")));
-    		} else {
-    			wholeNum = 0;
-    			numer = Integer.parseInt(part1[2].substring(0, part1[2].indexOf("/")));
-    		}
-	    	
-	    	denom = Integer.parseInt(part1[2].substring(part1[2].indexOf("/")+1));
-    	} else {
-//    		if whole number, numer = 0 and denom = 2 
-    		wholeNum = Integer.parseInt(part1[2]);
-    		numer = 0;
-    		denom = 1;
-    	}
-    	return "whole:" + wholeNum + " numerator:" + numer + " denominator:" + denom;
+    	int[] op1 = splitFrac(part1[0]);
+    	int[] op2 = splitFrac(part1[2]);
+    }	
     	
+    public static int[] splitFrac (String input) {	
+    	String[] answer = new
+    	if(input.contains("_")) {
+    		
+    	}
     }
-}
-
-//    public static String solveMethods(String op1, String operator, String op2) {
-//    	String[] firstFrac = op1.split("_");
+//    	int wholeNum;
+//    	int numer;
+//    	int denom;
+//    	if(part1[2].contains("/")) {
+//    		if(part1[2].contains("_")) {
+//    		wholeNum = Integer.parseInt(part1[2].substring(0, part1[2].indexOf("_"))); 
+//    	    numer = Integer.parseInt(part1[2].substring(part1[2].indexOf("_")+1, part1[2].indexOf("/")));
+//    		} else {
+//    			wholeNum = 0;
+//    			numer = Integer.parseInt(part1[2].substring(0, part1[2].indexOf("/")));
+//    		}
+//	    	
+//	    	denom = Integer.parseInt(part1[2].substring(part1[2].indexOf("/")+1));
+//    	} else {
+////    		if whole number, numer = 0 and denom = 2 
+//    		wholeNum = Integer.parseInt(part1[2]);
+//    		numer = 0;
+//    		denom = 1;
+//    	}
+//    	return "whole:" + wholeNum + " numerator:" + numer + " denominator:" + denom;
+//    	
 //    }
-
+//}
+//
+////    public static String solveMethods(String op1, String operator, String op2) {
+////    	String[] firstFrac = op1.split("_");
+////    }
+//
