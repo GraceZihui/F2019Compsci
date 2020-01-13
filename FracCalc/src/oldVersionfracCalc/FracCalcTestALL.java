@@ -1,4 +1,4 @@
-package OldVersionfracCalc;
+package oldVersionfracCalc;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;

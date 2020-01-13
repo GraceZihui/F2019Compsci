@@ -1,4 +1,4 @@
-package OldVersionfracCalc;
+package oldVersionfracCalc;
 
 import java.util.*;
 
